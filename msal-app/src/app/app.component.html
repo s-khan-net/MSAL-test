@@ -1,0 +1,19 @@
+<header class="toolbar">
+    <span style="margin-left: 16px; font-weight: 700;">MSAL v4 Demo</span>
+
+    <span class="spacer"></span>
+
+    <span *ngIf="isAuthenticated" style="margin-right: 12px;">Signed in as {{ username }}</span>
+
+    <button *ngIf="!isAuthenticated" (click)="login()" style="margin-right: 12px; padding: 8px 12px;">
+        Sign in
+    </button>
+
+    <button *ngIf="isAuthenticated" (click)="logout()" style="margin-right: 16px; padding: 8px 12px;">
+        Sign out
+    </button>
+</header>
+
+<main style="margin-top: 80px; padding: 16px;">
+    <router-outlet></router-outlet>
+</main>
